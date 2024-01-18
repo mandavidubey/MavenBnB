@@ -1,0 +1,274 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0 0.6rem 0 0.6rem;
+  }
+  .search-btn:hover {
+    background-color: #c5212c;
+    color: white;
+  }
+  .search-btn i {
+    display: inline;
+    padding: 0 0.5rem 0 0.8rem;
+    margin-right: 1rem;
+  }
+  .search-inpt {
+    border-radius: 25px;
+    padding: 0.3rem 3rem 0.5rem 3rem;
+    font-size: 0.9rem;
+  }
+  
+</style>
+
+<div class="sticky-top">
+  <nav class="navbar navbar-expand-sm bg-body-lightly border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"
+        ><i class="fa-regular fa-compass"></i
+      ></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explore</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 search-inpt"
+              type="search"
+              placeholder="Search destinations"
+            />
+            <button class="btn search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+          </form>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">WanderLust your home </a>
+          <% if(!currUser){%>
+          <a class="nav-link" aria-current="page" href="/signup"
+            ><b>Sign Up</b></a
+          >
+          <a class="nav-link" href="/login"><b>Login</b></a>
+          <%}%> <% if(currUser){%>
+          <a class="nav-link" href="/logout"><b>Log Out</b></a>
+          <%}%>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="filter-navbar navbar-expand-sm bg-body-lightly border-bottom">
+    <div class="gallery-wrap">
+      <i class="fa-solid fa-angle-left fa-xl" id="backBtn"></i>
+      <div class="gallery">
+        <div class="gallery-div">
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg"
+              />
+            </span>
+            <p>Caves</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg"
+              />
+            </span>
+            <p>A-frames</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg"
+              />
+            </span>
+            <p>Earth homes</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg"
+              />
+            </span>
+            <p>Beachfront</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
+              />
+            </span>
+            <p>Amazing pools</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg"
+              />
+            </span>
+            <p>Farms</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg"
+              />
+            </span>
+            <p>Amazing views</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg"
+              />
+            </span>
+            <p>Iconic cities</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+              />
+            </span>
+            <p>Rooms</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
+              />
+            </span>
+            <p>Trending</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/757deeaa-c78f-488f-992b-d3b1ecc06fc9.jpg"
+              />
+            </span>
+            <p>Ski-in/out</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/d721318f-4752-417d-b4fa-77da3cbc3269.jpg"
+              />
+            </span>
+            <p>Towers</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/33dd714a-7b4a-4654-aaf0-f58ea887a688.jpg"
+              />
+            </span>
+            <p>Historical homes</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg"
+              />
+            </span>
+            <p>Arctic</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg"
+              />
+            </span>
+            <p>New</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
+              />
+            </span>
+            <p>Golfing</p>
+          </div>
+
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg"
+              />
+            </span>
+            <p>Treehouses</p>
+          </div>
+          <div class="icon-text">
+            <span class="gallery-img">
+              <img
+                class="icon"
+                src="https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg"
+              />
+            </span>
+            <p>Lake</p>
+          </div>
+        </div>
+      </div>
+      <i class="fa-solid fa-angle-right fa-xl" id="nextBtn"></i>
+      <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+          <label
+            class="form-check-label tax-toggle-text"
+            for="flexSwitchCheckDefault"
+            >Display total after taxes</label
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
