@@ -1,6 +1,25 @@
 const Listing = require("./models/listing");
 const Review = require("./models/review");
+const { listSchema, reviewSchema } = require("./schema");
 const ExpressError = require("./utils/ExpressError");
+
+module.exports.listingValidation = (req, res, next) => {
+  let { error } = listSchema.validate(req.body);
+  if (error) {
+    let errorMsg = error.details[0].message;
+    return next(new ExpressError(400, errorMsg));
+  }
+  next();
+};
+
+module.exports.reviewValidation = (req, res, next) => {
+  let { error } = reviewSchema.validate(req.body);
+  if (error) {
+    let errorMsg = error.details[0].message;
+    return next(new ExpressError(400, errorMsg));
+  }
+  next();
+};
 
 module.exports.isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
@@ -24,38 +43,6 @@ module.exports.isOwner = async (req, res, next) => {
   if (!listing.owner._id.equals(res.locals.currUser._id)) {
     req.flash("error", "You Are Not The Owner Of This Listings !");
     return res.redirect(`/listings/${id}`);
-  } else {
-    next();
-  }
-};
-
-module.exports.listingValidation = (req, res, next) => {
-  if (Object.keys(req.body).length === 0) {
-    throw new ExpressError(204, "Body Is Empty !");
-  } else if (!req.body.title) {
-    throw new ExpressError(404, "Title is missing");
-  } else if (!req.body.description) {
-    throw new ExpressError(404, "Description is missing");
-  } else if (!req.body.price) {
-    throw new ExpressError(404, "Price is missing");
-  } else if (!req.body.country) {
-    throw new ExpressError(404, "Countery is missing");
-  } else if (!req.body.location) {
-    throw new ExpressError(404, "Location is missing");
-  } else {
-    next();
-  }
-};
-
-module.exports.reviewValidation = (req, res, next) => {
-  if (Object.keys(req.body.review).length === 0) {
-    throw new ExpressError(204, "Body Is Empty !");
-  } else if (!req.body.review.comment) {
-    throw new ExpressError(404, "Comment is missing");
-  } else if (!req.body.review.rating) {
-    throw new ExpressError(404, "Rating is missing");
-  } else if (req.body.rating <= 5 || req.body.rating >= 1) {
-    throw new ExpressError(404, "invalied Rating");
   } else {
     next();
   }

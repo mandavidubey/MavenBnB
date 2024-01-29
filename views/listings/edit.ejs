@@ -14,28 +14,27 @@
         <label for="title" class="form-label"><b>Title:</b></label>
         <input
           type="text"
-          name="title"
+          name="listing[title]"
           value="<%= 
                     listing.title%>"
           class="form-control"
           required
         />
-        <div class="valid-feedback">Title Looks good </div>
-        <div class="invalid-feedback">Please Enter Valid Title </div>
+        <div class="valid-feedback">Title Looks good</div>
+        <div class="invalid-feedback">Please Enter Valid Title</div>
       </div>
       <div class="mb-3">
         <label for="description" class="form-label"><b>Description:</b></label>
         <textarea
           type="text"
-          name="description"
+          name="listing[description]"
           rows="6"
           cols="50"
           class="form-control"
           required
+        ><%= listing.description%></textarea
         >
-                <%= listing.description%></textarea
-        >
-        <div class="invalid-feedback">Please Enter a Short Description </div>
+        <div class="invalid-feedback">Please Enter a Short Description</div>
         <div class="valid-feedback">Description Looks good</div>
       </div>
 
@@ -48,7 +47,7 @@
         <label for="image" class="form-label"
           ><b>Update Listing Image: </b></label
         >
-        <input type="file" name="image" class="form-control" />
+        <input type="file" name="listing[image]" class="form-control" />
       </div>
 
       <div class="row">
@@ -56,7 +55,7 @@
           <label for="price" class="form-label"><b>Price: </b></label>
           <input
             type="number"
-            name="price"
+            name="listing[price]"
             value="<%= listing.price%>"
             class="form-control"
             required
@@ -68,7 +67,7 @@
           <label for="country" class="form-label"><b>Country: </b></label>
           <input
             type="text"
-            name="country"
+            name="listing[country]"
             value="<%= listing.country%>"
             class="form-control"
             required
@@ -81,7 +80,7 @@
         <label for="location" class="form-label"><b>Location: </b></label>
         <input
           type="text"
-          name="location"
+          name="listing[location]"
           value="<%= listing.location %>"
           class="form-control"
           required
@@ -90,9 +89,7 @@
         <div class="valid-feedback">Nice</div>
       </div>
       <div class="d-grid gap-1 col-2 mx-auto">
-        <button class="btns-edt btns mt-3 updt-btn">
-          Update Listing
-        </button>
+        <button class="btns-edt btns mt-3 updt-btn">Update Listing</button>
       </div>
     </form>
   </div>

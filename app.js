@@ -15,7 +15,6 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
-
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
@@ -25,9 +24,9 @@ const dbUrl = process.env.ATLASDB_URL;
 async function main() {
   await mongoose.connect(dbUrl);
 }
-  main().then(() => {
-    console.log("Database is Connected ");
-  })
+main().then(() => {
+  console.log("Database is Connected ");
+});
 
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("ejs", engine);
@@ -37,14 +36,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 const store = MongoStore.create({
-  mongoUrl : dbUrl,
+  mongoUrl: dbUrl,
   crypto: {
     secret: process.env.SECRET,
   },
   touchAfter: 24 * 3600,
 });
 
-store.on("err", ()=>{
+store.on("err", () => {
   console.log("Error in Mongo Session Store ", err);
 });
 
@@ -59,6 +58,10 @@ const sessionOptions = {
     httpOnly: true,
   },
 };
+
+// app.get("/", (req, res) => {
+//   res.render("listings/home.ejs");
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -86,7 +89,6 @@ app.all("*", (req, res, next) => {
 
 app.use((err, req, res, next) => {
   let { status = 500, message = "SOMETHING WENT WRONG " } = err;
-  console.log(message);
   res.status(status).render("error.ejs", { err });
 });
 

@@ -1,7 +1,9 @@
 <% layout('layouts/boilerplate') %>
 <script>
   const mapToken = "<%= process.env.MAP_TOKEN %>";
+  const listing = <%- JSON.stringify(listing) %>;
 </script>
+
 <div class="row mt-2">
   <div class="container col-10 offset-1">
     <div class="col-8 offset-3">
@@ -20,7 +22,7 @@
         </p>
         <p class="card-text mb-2 mt-2"><%= listing.description %></p>
         <p class="card-text mb-2 mt-2">
-          <i>&#8377;<%= listing.price.toLocaleString("en-IN") %></i>
+          <i>&#8377;<%= listing.price %></i>
           <i class="tax-info"><b>&nbsp; &nbsp;&nbsp; +18% GST</b></i>
         </p>
         <p class="card-text mb-2 mt-2"><%= listing.location %></p>
@@ -150,7 +152,11 @@
               method="post"
               class="mb-3"
             >
-              <button class="btns btns-dlt-review btn-sm btn-dark offset-3 mt-3">Delete Review</button>
+              <button
+                class="btns btns-dlt-review btn-sm btn-dark offset-3 mt-3"
+              >
+                Delete Review
+              </button>
             </form>
             <%}%>
           </div>
@@ -159,10 +165,10 @@
       </div>
     </div>
     <%}%>
+  </div>
+  <div class="map-container">
+    <h1 class="h1 mt-3">Where You'll Be</h1>
+    <div id="map"></div>
+  </div>
 </div>
-<div class="map-container">
-  <h1 class="h1 mt-3">Where You'll Be</h1>
-  <div class="map" id="map"></div>
-</div>
-</div>
-<script src="/public/js/map.js"></script>
+<script src="/js/map.js"></script>

@@ -15,7 +15,7 @@
         <label for="title" class="form-label">Title:</label>
         <input
           type="text"
-          name="title"
+          name="listing[title]"
           placeholder="Enter title"
           class="form-control"
           required
@@ -28,18 +28,23 @@
         <label for="description" class="form-label">Description:</label>
         <input
           type="text"
-          name="description"
+          name="listing[description]"
           placeholder="Enter description"
           class="form-control"
           required
         />
-        <div class="invalid-feedback">Please Enter a Sort Description </div>
-        <div class="valid-feedback">Description Looks good </div>
+        <div class="invalid-feedback">Please Enter a Sort Description</div>
+        <div class="valid-feedback">Description Looks good</div>
       </div>
 
       <div class="mb-3">
         <label for="image" class="form-label">Upload Listing Image: </label>
-        <input type="file" name="image" class="form-control" required />
+        <input
+          type="file"
+          name="listing[image]"
+          class="form-control"
+          required
+        />
         <div class="invalid-feedback">Please Upload Your Image</div>
         <div class="valid-feedback">Nice</div>
       </div>
@@ -49,7 +54,7 @@
           <label for="price" class="form-label">Price: </label>
           <input
             type="number"
-            name="price"
+            name="listing[price]"
             placeholder="Enter price"
             class="form-control"
             required
@@ -62,7 +67,7 @@
           <label for="country" class="form-label">Country: </label>
           <input
             type="text"
-            name="country"
+            name="listing[country]"
             placeholder="Enter country"
             class="form-control"
             required
@@ -76,7 +81,7 @@
         <label for="location" class="form-label">Location: </label>
         <input
           type="text"
-          name="location"
+          name="listing[location]"
           placeholder="Enter location"
           class="form-control"
           required
@@ -85,9 +90,7 @@
         <div class="valid-feedback">Nice</div>
       </div>
       <div class="d-grid gap-1 col-2 mx-auto">
-        <button class="btns btns-edt mt-3">
-          Add Listing
-        </button>
+        <button class="btns btns-edt mt-3">Add Listing</button>
       </div>
     </form>
   </div>

@@ -2,21 +2,21 @@
 <body>
   <ol>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-      <% for (let i of allListings){%>
-      <a href="/listings/<%= i._id %>" class="listing-link">
+      <% for (let listing of allListings){%>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
         <div class="card col listings-card">
           <img
-            src="<%=i.image.url%>"
+            src="<%=listing.image.url%>"
             class="card-img-top"
             alt="listing-img"
             style="height: 17rem"
           />
-          <div class="card-img-overlay card-img"><%=i.title%></div>
+          <div class="card-img-overlay card-img"><%=listing.title%></div>
           <div class="card-body">
             <p class="card-text">
-              <b><%=i.title%></b>
+              <b><%=listing.title%></b>
               <br />
-              <i>&#8377;<%= i.price.toLocaleString("en-IN") %></i> / Night
+              <i>&#8377;<%= listing.price %></i> / Night
               <i class="tax-info"><b>&nbsp; &nbsp;&nbsp; +18% GST</b></i>
             </p>
           </div>

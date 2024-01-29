@@ -4,7 +4,9 @@ const Listing = require("../models/listing.js");
 
 const dbUrl = process.env.ATLAS_DB_CONNECTION_URL;
 async function main() {
-  await mongoose.connect('mongodb+srv://mrakmondal6612:COuGGotxuox1Rvmn@cluster0.hqj9u7q.mongodb.net/?retryWrites=true&w=majority');
+  await mongoose.connect(
+    "mongodb+srv://mrakmondal6612:COuGGotxuox1Rvmn@cluster0.hqj9u7q.mongodb.net/?retryWrites=true&w=majority"
+  );
 }
 
 main()

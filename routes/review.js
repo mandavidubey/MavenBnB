@@ -5,7 +5,7 @@ const {
   isLoggedIn,
   reviewValidation,
   isReviewAuthor,
-} = require("../middleware");
+} = require("../middleware.js");
 
 const reviewController = require("../controllers/review");
 const router = express.Router({ mergeParams: true });

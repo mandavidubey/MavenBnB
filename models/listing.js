@@ -28,17 +28,17 @@ let listSchema = new Schema({
     ref: "User",
     reqired: true,
   },
-  // geometry: {
-  //   type: {
-  //     type: String,
-  //     enum: ["Point"],
-  //     required: true,
-  //   },
-  //   coordinates: {
-  //     type: [Number],
-  //     required: true,
-  //   },
- // },
+  geometry: {
+    type: {
+      type: String,
+      enum: ["Point"],
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+    },
+  },
 });
 
 listSchema.post("findOneAndDelete", async (listing) => {
