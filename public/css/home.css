@@ -1,9 +1,9 @@
 body {
   height: 95vh;
   overflow: hidden;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   background-color: #fe424d;
 }
 
@@ -14,9 +14,12 @@ a {
   background-color: white;
   border-radius: 10px;
   padding: 0.8rem;
-  position: relative;
+  position:relative;
   top: 0;
   transition: top ease 0.5s;
+  margin-left: 500px;
+  align-items: center;
+  justify-content: center; 
 }
 
 a:hover {
@@ -25,33 +28,40 @@ a:hover {
   top: -8px;
 }
 
+.title{
+  background-color: rgb(33, 56, 75);
+  height: 10%;
+  padding: 0;
+  width: 1280px;
+}
+
 h3 {
+  margin-top: 40px;
+  display:run-in;
   font-size: 1.4rem;
   font-style: italic;
   font-weight: bolder;
-  position: relative;
   font-size: 40px;
   color: #fff;
   text-transform: uppercase;
-  animation: flip 3s 1;
-  animation-delay: calc(0.5s * var(--i));
+  animation: 5s linear 1s infinite running slidein;
 }
 
-@keyframes flip {
-  0%,
-  80% {
-    transform: rotateY(360deg);
+@keyframes slidein {
+  from {
+    transform: translateX(-40vh);
+  }
+  to {
+    transform: translateX(200vh);
   }
 }
 
 li {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   transition-timing-function: ease-in 1s;
   font-size: 1.4rem;
   font-family: "Times New Roman", Times, serif;
 }
-
-/* @media(max-width: 500px){
-    a{
-        flex-wrap: wrap;
-    }
-} */
