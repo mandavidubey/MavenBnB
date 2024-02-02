@@ -566,11 +566,15 @@ body {
   }
 }
 @media (max-width: 785px) {
-  .filter-navbar {
-    display: none;
-  }
+
   .btns-review {
     margin-left: 6rem;
+  }
+}
+
+@media (max-width: 400px){
+  .filter-navbar {
+    display: none;
   }
 }
 

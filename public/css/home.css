@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   height: 95vh;
   overflow: hidden;
@@ -23,19 +28,18 @@ a {
 }
 
 a:hover {
-  color: navy;
-  box-shadow: 3px 3px 3px 3px navy;
+  box-shadow: 3px 3px 3px 3px black;
   top: -8px;
 }
 
 .title{
   background-color: rgb(33, 56, 75);
-  height: 10%;
-  padding: 0;
-  width: 1280px;
+  height: 50px;
+  width: 100%;
 }
 
 h3 {
+  text-shadow: 0 0 7px #fff, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
   margin-top: 40px;
   display:run-in;
   font-size: 1.4rem;
@@ -64,4 +68,10 @@ li {
   transition-timing-function: ease-in 1s;
   font-size: 1.4rem;
   font-family: "Times New Roman", Times, serif;
+}
+
+@media (max-width: 375px){
+  li{
+    flex-wrap: wrap;
+  }
 }
