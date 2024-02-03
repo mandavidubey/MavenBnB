@@ -18,15 +18,15 @@
 
       <div class="card-body">
         <p class="card-text mb-2 mt-2">
-          Owned By <i><%= listing.owner.username %></i>
+          <b>Owned By</b><i><%= listing.owner.username %></i>
         </p>
-        <p class="card-text mb-2 mt-2"><%= listing.description %></p>
+        <p class="card-text mb-2 mt-2"><b>Description:</b><br><%= listing.description %></p>
         <p class="card-text mb-2 mt-2">
-          <i>&#8377;<%= listing.price %></i>
+          <b>Price:</b>&nbsp;<i>&#8377;<%= listing.price %></i>
           <i class="tax-info"><b>&nbsp; &nbsp;&nbsp; +18% GST</b></i>
         </p>
-        <p class="card-text mb-2 mt-2"><%= listing.location %></p>
-        <p class="card-text mb-2 mt-2"><%= listing.country %></p>
+        <p class="card-text mb-2 mt-2"><b>City:&nbsp;</b><%= listing.location %></p>
+        <p class="card-text mb-2 mt-2"><b>Country:&nbsp;</b><%= listing.country %></p>
       </div>
     </div>
     <br />

@@ -145,7 +145,6 @@
 .starability-growRotate > label {
   position: relative;
   display: inline-block;
-  float: left;
   width: 30px;
   height: 30px;
   font-size: 0.1em;

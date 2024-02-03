@@ -60,7 +60,7 @@ h3 {
   }
 }
 
-li {
+p {
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ li {
 }
 
 @media (max-width: 375px){
-  li{
+  p{
     flex-wrap: wrap;
   }
 }
