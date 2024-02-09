@@ -269,7 +269,7 @@ body {
 #map {
   height: 300px;
   width: 30rem;
-  margin-left: 300px;
+  margin-left: 310px;
 }
 
 /* Marker Popup */
@@ -342,11 +342,11 @@ body {
   border: 1px solid black;
   border-radius: 1rem;
   padding: 0.4rem;
-  display:inline-flex;
+  display: inline-flex;
   margin-left: 1rem;
   margin-right: 3rem;
-   margin-bottom: 2rem;
-   align-items: center;
+  margin-bottom: 2rem;
+  align-items: center;
 }
 
 .gallery-wrap {
@@ -358,7 +358,7 @@ body {
 
 .gallery {
   display: flex;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
 .gallery-div {
@@ -366,7 +366,7 @@ body {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-gap: 20px;
-  flex:none;
+  flex: none;
 }
 
 .icon-text {
@@ -402,16 +402,16 @@ body {
   transform: scale(1.1);
   opacity: 1;
 }
-#backBtn:hover, #nextBtn:hover {
+#backBtn:hover,
+#nextBtn:hover {
   filter: grayscale(0);
   cursor: pointer;
   transform: scale(1.1);
   opacity: 1;
 }
 
-.form-check-label{
+.form-check-label {
   margin-right: 3rem;
-
 }
 
 @media (max-width: 1280px) {
@@ -489,13 +489,12 @@ body {
   }
 }
 @media (max-width: 785px) {
-
   .btns-review {
     margin-left: 6rem;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .filter-navbar {
     display: none;
   }

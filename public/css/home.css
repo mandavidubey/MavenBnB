@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,18 +13,18 @@ body {
 }
 
 a {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   text-decoration: none;
   color: black;
   background-color: white;
   border-radius: 10px;
   padding: 0.8rem;
-  position:relative;
+  position: relative;
   top: 0;
   transition: top ease 0.5s;
   margin-left: 500px;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 a:hover {
@@ -32,7 +32,7 @@ a:hover {
   top: -8px;
 }
 
-.title{
+#title {
   background-color: rgb(33, 56, 75);
   height: 50px;
   width: 100%;
@@ -41,8 +41,8 @@ a:hover {
 h3 {
   text-shadow: 0 0 7px #fff, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
   margin-top: 40px;
-  display:run-in;
-  font-size: 1.4rem;
+  display: run-in;
+  font-size: 1.4vw;
   font-style: italic;
   font-weight: bolder;
   font-size: 40px;
@@ -64,14 +64,71 @@ p {
   margin-top: 50px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   transition-timing-function: ease-in 1s;
   font-size: 1.4rem;
   font-family: "Times New Roman", Times, serif;
 }
 
-@media (max-width: 375px){
-  p{
-    flex-wrap: wrap;
+@media (max-width: 1920px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 50rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
+  }
+}
+
+@media (max-width: 960px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
+  }
+}
+
+@media (max-width: 360px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
+  }
+}
+
+@media (max-width: 320px) {
+  p {
+    width: 100%;
+  }
+  a{
+    margin: 30rem;
   }
 }
