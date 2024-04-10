@@ -1,134 +1,44 @@
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color:bisque;
 }
-body {
-  height: 95vh;
-  overflow: hidden;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+
+header {
   background-color: #fe424d;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-a {
-  font-size: 1.5vw;
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 2em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fe424d;
+  color: white;
+  padding: 10px 20px;
   text-decoration: none;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  padding: 0.8rem;
-  position: relative;
-  top: 0;
-  transition: top ease 0.5s;
-  margin-left: 500px;
-  align-items: center;
-  justify-content: center;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-a:hover {
-  box-shadow: 3px 3px 3px 3px black;
-  top: -8px;
-}
-
-#title {
-  background-color: rgb(33, 56, 75);
-  height: 50px;
-  width: 100%;
-}
-
-h3 {
-  text-shadow: 0 0 7px #fff, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
-  margin-top: 40px;
-  display: run-in;
-  font-size: 1.4vw;
-  font-style: italic;
-  font-weight: bolder;
-  font-size: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  animation: 5s linear 1s infinite running slidein;
-}
-
-@keyframes slidein {
-  from {
-    transform: translateX(-40vh);
-  }
-  to {
-    transform: translateX(200vh);
-  }
-}
-
-p {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-timing-function: ease-in 1s;
-  font-size: 1.4rem;
-  font-family: "Times New Roman", Times, serif;
-}
-
-@media (max-width: 1920px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 50rem;
-  }
-}
-
-@media (max-width: 1366px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
-}
-
-@media (max-width: 960px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
-}
-
-@media (max-width: 480px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
-}
-
-@media (max-width: 360px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
-}
-
-@media (max-width: 320px) {
-  p {
-    width: 100%;
-  }
-  a{
-    margin: 30rem;
-  }
+.btn:hover {
+  background-color: #ff6363;
 }

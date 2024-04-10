@@ -16,7 +16,7 @@ module.exports.signupUser = async (req, res, next) => {
       if (err) {
         return next(err);
       }
-      req.flash("success", "Welcome to WanderLust !");
+      req.flash("success", "Welcome to MavenBnB !");
       res.redirect("/listings");
     });
   } catch (err) {
@@ -30,7 +30,7 @@ module.exports.renderLoginForm = (req, res) => {
 };
 
 module.exports.loginUser = async (req, res) => {
-  req.flash("success", "Welcome Back To WanderLust !");
+  req.flash("success", "Welcome Back To MavenBnB !");
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
 };
